@@ -1,5 +1,5 @@
 :root {
-    --border: solid red;
+    /* --border: solid red; */
 }
 
 /* Global styling */
@@ -28,10 +28,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: gray; */
+    background-color: black;
     background-size: cover;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     position: sticky;
+    /* position: fixed; */
     /* padding-left: 30px; */
     font-size: larger;
     border: var(--border);
@@ -94,49 +95,66 @@ p {
     font-size: large;
 }
 
-.card {
+#main-project {
+    display: flex;
     background-image: url("./images/screenshot.png");
     background-size: cover;
-    /* padding: 25px; */
-    /* width: 100%;
-    height: 600px; */
-    flex: 0 0 80%;
+    object-fit: cover;
+    padding: 25px; 
+    width:800px;
+    height: 500px;
+    /* flex: 1 0 100%; */
     border: solid 3px darkgray;
-    display: flex;
+    align-items: flex-end;
+}
+
+.card {
+    height: 600px;
+    /* margin: 20px; */
+    flex-shrink: 0;
     flex-wrap: wrap;
-    align-items: flex-end ;
 }
 
 #led-wall {
+    display: flex;
     background-image: url("./images/LEDwall.webp");
     background-size: cover;
-    /* width: 500px;
-    height: 500px; */
+    /* object-fit: cover; */
+    width: 400px;
+    height: 300px;
     border: solid 3px darkgray;
-    flex: 0 0 20%;
+    flex: 1 0 100%;
+    align-items: flex-end;
 }
 
 #portfolio {
+    display: flex;
     background-size: cover;
-    /* width: 500px;
-    height: 500px; */
+    width: 400px;
+    height: 300px;
     border: solid 3px darkgray;
+    flex: 1 0 100%;
+    align-items: flex-end;
 }
 
 #pastel-puzzles {
+    display: flex;
     background-image: url("./images/pastel_rubix.jpeg");
     background-size: cover;
-    /* width: 300px;
-    height: 300px; */
+    width: 465px;
+    height: 300px;
     border: solid 3px darkgray;
+    align-items: flex-end;
 }
 
 #run-buddy {
+    display: flex;
     background-image: url("./images/RunBuddy.jpeg");
     background-size: cover;
-    /* width: 300px;
-    height: 300px; */
+    width: 100%;
+    height: 300px;
     border: solid 3px darkgray;
+    align-items: flex-end;
 }
 
 #main-project:hover,
@@ -175,18 +193,20 @@ footer nav ul li {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
-    width: 100%;
+    flex: 100%;
     border: var(--border);
 }
 
 .main-content {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 100%;
+    height: 100%;
     border: var(--border);
     flex: 1;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin: 10px;
+
 }
 
 .sidebar {
@@ -202,13 +222,15 @@ footer nav ul li {
 
 }
 
-@media screen and (max-width: 980px) {
-    /* header {
+@media screen and (max-width: 768px) {
+    header {
         padding-bottom: 0;
         justify-content: center;
         position: relative;
+        width: 100%;
+        text-align: center;
     }
-     */
+    
     /* header h1 {
         width: 100%;
         text-align: center;

@@ -32,8 +32,6 @@ header {
     background-size: cover;
     background-attachment: fixed;
     position: sticky;
-    /* position: fixed; */
-    /* padding-left: 30px; */
     font-size: larger;
     border: var(--border);
 }
@@ -53,15 +51,10 @@ header nav ul li {
     margin: 10px;
 }
 
-header nav ul a:hover {
-   text-shadow: 5px 5px 3px goldenrod;
-   border: var(--border);
-}
-
 h1 {
-    border: solid 2px rgba(169, 169, 169, 0.171);
+    border: solid 2px goldenrod;
     color: white;
-    background-color: goldenrod;
+    background-color: rgba(218, 165, 32, 0.399);
     padding: 5px 5px 5px 5px;
     font-size: 50px;
 }
@@ -101,25 +94,18 @@ p {
     background-size: cover;
     object-fit: cover;
     padding: 25px; 
-    width:800px;
+    width:840px;
     height: 500px;
     /* flex: 1 0 100%; */
     border: solid 3px darkgray;
     align-items: flex-end;
 }
 
-.card {
-    height: 600px;
-    /* margin: 20px; */
-    flex-shrink: 0;
-    flex-wrap: wrap;
-}
-
 #led-wall {
     display: flex;
     background-image: url("./images/LEDwall.webp");
     background-size: cover;
-    /* object-fit: cover; */
+    object-fit: cover;
     width: 400px;
     height: 300px;
     border: solid 3px darkgray;
@@ -129,6 +115,7 @@ p {
 
 #portfolio {
     display: flex;
+    background-image: url("./images/Portfolio_screenshot.png");
     background-size: cover;
     width: 400px;
     height: 300px;
@@ -144,6 +131,7 @@ p {
     width: 465px;
     height: 300px;
     border: solid 3px darkgray;
+    flex: 1 0 100%;
     align-items: flex-end;
 }
 
@@ -219,8 +207,13 @@ footer nav ul li {
     flex-shrink: 0;
     /* border: var(--border); */
     margin: 0 50px 0 0;
-
 }
+
+footer nav ul a:hover,
+header nav ul a:hover {
+    text-shadow: 5px 5px 3px goldenrod;
+    border: solid 2px goldenrod;
+ }
 
 @media screen and (max-width: 768px) {
     header {
@@ -231,10 +224,10 @@ footer nav ul li {
         text-align: center;
     }
     
-    /* header h1 {
+    header h1 {
         width: 100%;
         text-align: center;
-    } */
+    }
     
     footer nav ul,
     header nav ul {
@@ -253,8 +246,7 @@ footer nav ul li {
         text-align: center;
         width: 100%;
     }
-/* 
-    .section-title {
-        width: 20%;
-    } */
-}
+
+    #main-project {
+        width: 500px;
+    }

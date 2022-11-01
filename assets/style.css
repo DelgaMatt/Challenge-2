@@ -16,14 +16,6 @@ body {
     border: var(--border)
 }
 
-.section-title {
-    display: flex;
-    font-size: 30px;
-    align-items: center;
-    justify-content: flex-end;
-    border: var(--border);
-}
-
 header {
     display: flex;
     justify-content: space-between;
@@ -34,6 +26,7 @@ header {
     position: sticky;
     font-size: larger;
     border: var(--border);
+    -webkit-text-stroke-color: black;
 }
 
 header nav ul{
@@ -77,6 +70,15 @@ h1 {
     border: solid 3px darkgray;
 }
 
+.section-title {
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+    justify-content: flex-end;
+    border: var(--border);
+    text-decoration: underline solid 2px goldenrod;
+}
+
 #odyssey {
     border: solid 2px darkgray;
     background-color: black;
@@ -86,95 +88,6 @@ h1 {
 p {
     line-height: 1.5;
     font-size: large;
-}
-
-#main-project {
-    display: flex;
-    background-image: url("./images/screenshot.png");
-    background-size: cover;
-    object-fit: cover;
-    padding: 25px; 
-    width:840px;
-    height: 500px;
-    /* flex: 1 0 100%; */
-    border: solid 3px darkgray;
-    align-items: flex-end;
-}
-
-#led-wall {
-    display: flex;
-    background-image: url("./images/LEDwall.webp");
-    background-size: cover;
-    object-fit: cover;
-    width: 400px;
-    height: 300px;
-    border: solid 3px darkgray;
-    flex: 1 0 100%;
-    align-items: flex-end;
-}
-
-#portfolio {
-    display: flex;
-    background-image: url("./images/Portfolio_screenshot.png");
-    background-size: cover;
-    width: 400px;
-    height: 300px;
-    border: solid 3px darkgray;
-    flex: 1 0 100%;
-    align-items: flex-end;
-}
-
-#pastel-puzzles {
-    display: flex;
-    background-image: url("./images/pastel_rubix.jpeg");
-    background-size: cover;
-    width: 465px;
-    height: 300px;
-    border: solid 3px darkgray;
-    flex: 1 0 100%;
-    align-items: flex-end;
-}
-
-#run-buddy {
-    display: flex;
-    background-image: url("./images/RunBuddy.jpeg");
-    background-size: cover;
-    width: 100%;
-    height: 300px;
-    border: solid 3px darkgray;
-    align-items: flex-end;
-}
-
-#main-project:hover,
-#led-wall:hover,
-#portfolio:hover,
-#pastel-puzzles:hover,
-#run-buddy:hover {
-    opacity: 25%;
-}
-
-footer {
-    display: flex;
-    list-style: none;
-    border: var(--border);
-    justify-content: space-between;
-    align-items: center;
-}
-
-footer nav ul {
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-    padding: 20px;
-    border: var(--border);
-}
-
-footer nav ul li {
-    display: flex;
-    padding: 20px;
-    border: var(--border);
-    margin: 30px;
-    justify-content: space-between;
 }
 
 .flex-container {
@@ -209,6 +122,103 @@ footer nav ul li {
     margin: 0 50px 0 0;
 }
 
+#main-project {
+    display: flex;
+    background-image: url("./images/screenshot.png");
+    background-size: cover;
+    object-fit: cover;
+    width:840px;
+    height: 500px;
+    border: solid 3px goldenrod;
+    align-items: flex-end;
+}
+
+#led-wall {
+    display: flex;
+    background-image: url("./images/LEDwall.webp");
+    background-size: cover;
+    object-fit: cover;
+    width: 400px;
+    height: 300px;
+    border: solid 3px goldenrod;
+    flex: 1 0 100%;
+    align-items: flex-end;
+}
+
+#portfolio {
+    display: flex;
+    background-image: url("./images/Portfolio_screenshot.png");
+    background-size: cover;
+    width: 400px;
+    height: 300px;
+    border: solid 3px goldenrod;
+    flex: 1 0 100%;
+    align-items: flex-end;
+}
+
+#pastel-puzzles {
+    display: flex;
+    background-image: url("./images/pastel_rubix.jpeg");
+    background-size: cover;
+    width: 465px;
+    height: 300px;
+    border: solid 3px goldenrod;
+    flex: 1 0 100%;
+    align-items: flex-end;
+}
+
+#run-buddy {
+    display: flex;
+    background-image: url("./images/RunBuddy.jpeg");
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    border: solid 3px goldenrod;
+    align-items: flex-end;
+}
+
+.card {
+    display: flex;
+    border: solid 2px white;
+    flex-direction: column;
+    background-color: gray;
+    padding: 0 10px 0 10px;
+}
+
+#main-project:hover,
+#led-wall:hover,
+#portfolio:hover,
+#pastel-puzzles:hover,
+#run-buddy:hover {
+    opacity: 25%;
+}
+
+footer {
+    display: flex;
+    list-style: none;
+    border: var(--border);
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 20px;
+    border: var(--border);
+}
+
+footer nav ul li {
+    display: flex;
+    padding: 20px;
+    border: var(--border);
+    margin: 30px;
+    justify-content: space-between;
+}
+
+
+
 footer nav ul a:hover,
 header nav ul a:hover {
     text-shadow: 5px 5px 3px goldenrod;
@@ -224,7 +234,8 @@ header nav ul a:hover {
         text-align: center;
     }
     
-    header h1 {
+    header h1,
+    footer h2, {
         width: 100%;
         text-align: center;
     }
